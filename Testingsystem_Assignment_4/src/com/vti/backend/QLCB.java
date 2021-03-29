@@ -90,10 +90,9 @@ public class QLCB {
 	
 	// tim Can bo
 	public void findCanBo() {
-		String name;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Nhap vao ten can bo muon tim");
-		name = scanner.nextLine();
+		String name = scanner.nextLine();
 		boolean check = false;
 		for (CanBo canBo: canBos) {
 			if (name.equals(canBo.getName()) ) {

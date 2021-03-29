@@ -1,10 +1,15 @@
 package com.vti.entity.Abstraction;
 
+import java.util.Scanner;
+
 public class Contact {
 	private String name;
-	private int number;
+	private String number;
+	
+	public Contact() {
+	}
 
-	public Contact(int number, String name) {
+	public Contact(String number, String name) {
 		this.name = name;
 		this.number = number;
 	}
@@ -17,12 +22,26 @@ public class Contact {
 		this.name = name;
 	}
 
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	}
 
-	public void setNumber(int number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
+	public void addContact() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Nhap ten: ");
+		name = scanner.nextLine();
+		
+		System.out.print("Nhap so dien thoai: ");
+		number = scanner.nextLine();
+	}
 
+	@Override
+	public String toString() {
+		return "Contact [name=" + name + ", number=" + number + "]";
+	}
+	
 }
